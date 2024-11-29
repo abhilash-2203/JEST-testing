@@ -4,21 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          <p>Learn testcases</p>
-        </a>
-      </header>
+      <p>First React Test Case</p>
+      <p>Abhilash</p>
+      <img title="AI generated image" src="https://img.freepik.com/free-photo/fantasy-style-scene-with-mountains-landscape_23-2151124734.jpg?t=st=1732879282~exp=1732882882~hmac=2e352a4f769a4a104331b12ba33008f41e6f6adb4905b0f99abbcbcda45ad17f" />
     </div>
   );
 }

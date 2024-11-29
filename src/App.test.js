@@ -1,9 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Test first React case', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Learn testcases/i);
-  expect(linkElement).toBeInTheDocument();
+  const text = screen.getByText(/First React test case/i);
+  const text2 = screen.getByText("Abhilash");
+  const title=screen.getByTitle("AI generated image")
+  expect(text).toBeInTheDocument();
+  expect(title).toBeInTheDocument();
+  expect(text2).toBeInTheDocument();
 });
 

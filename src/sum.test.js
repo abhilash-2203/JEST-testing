@@ -10,7 +10,7 @@ test("testing for sum function",()=>{
 test("testing for sum function 2",()=>{
     let a=100;
     let b=200;
-    let c=400;
     let output=300;
+
     expect(sum(a,b)).toBe(output)
 })
