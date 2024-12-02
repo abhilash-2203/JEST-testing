@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('Test first test case', () => {
+test('Testt first test case', () => {
   render(<App />);
   const text = screen.getByText(/First React test case/i);
   const text2 = screen.getByText("Abhilash");
@@ -21,4 +21,49 @@ test('Testing Input box',()=>{
   expect(inputBox).toHaveAttribute("id","userId");
   expect(inputBox).toHaveAttribute("type","text");
   expect(inputBox).toHaveAttribute("value","Abhilash");
+})
+
+describe("UI test cases group",()=>{
+  test("testt case 1",()=>{
+     render(<App/>) 
+     let inputBox=screen.getByRole("textbox");
+     expect(inputBox).toHaveAttribute("name","username")
+  })
+  test("testt case 2",()=>{
+    render(<App/>) 
+    let inputBox=screen.getByRole("textbox");
+    expect(inputBox).toHaveAttribute("name","username")
+ })
+ test("testt case 3",()=>{
+  render(<App/>) 
+  let inputBox=screen.getByRole("textbox");
+  expect(inputBox).toHaveAttribute("name","username")
+})
+})
+
+describe("API test cases group",()=>{
+  test("api test case 1",()=>{
+     render(<App/>) 
+     let inputBox=screen.getByRole("textbox");
+     expect(inputBox).toHaveAttribute("name","username")
+  })
+  test("api test case 2",()=>{
+    render(<App/>) 
+    let inputBox=screen.getByRole("textbox");
+    expect(inputBox).toHaveAttribute("name","username")
+ })
+ test("api test case 3",()=>{
+  render(<App/>) 
+  let inputBox=screen.getByRole("textbox");
+  expect(inputBox).toHaveAttribute("name","username")
+})
+
+describe("Inner describe test group",()=>{
+  test("inner test case 4",()=>{
+    render(<App/>) 
+    let inputBox=screen.getByRole("textbox");
+    expect(inputBox).toHaveAttribute("name","username")
+ })
+})
+ 
 })
