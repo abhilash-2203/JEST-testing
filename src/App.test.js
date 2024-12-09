@@ -10,7 +10,7 @@ import App from './App';
 //   expect(title).toBeInTheDocument();
 //   expect(text2).toBeInTheDocument();
 // });
-
+ 
 // test('Testing Input box',()=>{
 //   render(<App/>);
 //   let inputBox=screen.getByRole("textbox");
@@ -72,9 +72,18 @@ import App from './App';
 
 // Onchange Events
 
-test("onchange event testing",()=>{
+// test("onchange event testing",()=>{
+//   render(<App/>)
+//   let input=screen.getByRole("textbox");
+//   fireEvent.change(input,{target:{value:'a'}});
+//   expect(input.value).toBe("atest")
+// })
+
+// CLick event test
+
+test("click event test",()=>{
   render(<App/>)
-  let input=screen.getByRole("textbox");
-  fireEvent.change(input,{target:{value:'a'}});
-  expect(input.value).toBe("atest")
+  let btn=screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Updated successfully")).toBeInTheDocument();
 })

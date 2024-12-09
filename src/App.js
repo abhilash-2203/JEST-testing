@@ -6,9 +6,15 @@ function App() {
 
   return (
     <div className="App">
+      {/* click event  */}
+      <h1>Test Click event with Button</h1>
+      <button onClick={()=>setData("Updated successfully")}>Update Data</button>
+      <h1>{data}</h1>
+     
 
-      <h1>Test Onchange event with input text</h1>
-      <input type='text' value={data} onChange={(e)=>setData(e.target.value+"test")}/>
+      {/* change event  */}
+      {/* <h1>Test Onchange event with input text</h1>
+      <input type='text' value={data} onChange={(e)=>setData(e.target.value+"test")}/> */}
 
        {/* <p>First React Test Case</p>
      <p>Abhilash</p>
